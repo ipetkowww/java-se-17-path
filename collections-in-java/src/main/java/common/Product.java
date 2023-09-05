@@ -1,6 +1,10 @@
 package common;
 
+import java.util.Comparator;
+
 public record Product(String name, int weight) {
+
+    public static final Comparator<Product> BY_WEIGHT = Comparator.comparingInt(Product::weight);
 
     @Override
     public String toString() {
