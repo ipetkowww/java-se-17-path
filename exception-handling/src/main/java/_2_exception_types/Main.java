@@ -12,8 +12,6 @@ public class Main {
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new FileReader(args[0]))) {
             processFile(reader);
-
-
         } catch (FileNotFoundException ex) {
             System.out.println("File not found: " + args[0]);
         } catch (IOException ex) {
