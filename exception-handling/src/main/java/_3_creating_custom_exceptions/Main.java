@@ -1,6 +1,5 @@
-package _2_exception_types;
+package _3_creating_custom_exceptions;
 
-import _3_creating_custom_exceptions.InvalidStatementException;
 import common.Calculator;
 
 import java.io.BufferedReader;
@@ -17,6 +16,11 @@ public class Main {
             System.out.println("File not found: " + args[0]);
         } catch (IOException ex) {
             System.out.println("Error - " + ex.getMessage());
+        } catch (InvalidStatementException ex) {
+            System.out.println("Error invalid statement - " + ex.getMessage());
+            if (ex.getCause() != null) {
+                System.out.println("  caused by " + ex.getCause());
+            }
         } catch (Exception ex) {
             System.out.println("Error processing file - " + ex.getMessage());
         }
@@ -28,5 +32,6 @@ public class Main {
             Calculator.performOperation(inputLine);
         }
     }
+
 }
 
