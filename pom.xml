@@ -12,6 +12,7 @@
         <module>oop-course</module>
         <module>collections-in-java</module>
         <module>exception-handling</module>
+        <module>building-an-application-using-java</module>
     </modules>
 
     <properties>
